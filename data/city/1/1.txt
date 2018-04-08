@@ -1,0 +1,9 @@
+[
+  {"AreaName":"比利時","AreaNo":"1007","CityId":"","Type":"2","img":"images/120.jpg","lat":"50.855062","lng":"4.305351","path":{"level1":"歐洲","level2":"比利時","level3":""},"next":"1"},
+  {"AreaName":"義大利","AreaNo":"1023","CityId":"","Type":"2","img":"images/120.jpg","lat":"41.910242","lng":"12.395912","path":{"level1":"歐洲","level2":"比利時","level3":""},"next":"1"},
+  {"AreaName":"法國","AreaNo":"1015","CityId":"","Type":"2","img":"images/120.jpg","lat":"48.858951","lng":"2.277517","path":{"level1":"歐洲","level2":"法國","level3":""},"next":"1"},
+  {"AreaName":"荷蘭","AreaNo":"1031","CityId":"","Type":"2","img":"images/120.jpg","lat":"52.374739","lng":"4.758530","path":{"level1":"歐洲","level2":"荷蘭","level3":""},"next":"1"},
+  {"AreaName":"瑞士","AreaNo":"1043","CityId":"","Type":"2","img":"images/120.jpg","lat":"46.954723","lng":"7.359851","path":{"level1":"歐洲","level2":"瑞士","level3":""},"next":"1"},
+  {"AreaName":"英國","AreaNo":"1045","CityId":"","Type":"2","img":"images/120.jpg","lat":"51.528735","lng":"-0.381784","path":{"level1":"歐洲","level2":"英國","level3":""},"next":"1"},
+  {"AreaName":"英國","AreaNo":"1045","CityId":"","Type":"2","img":"images/120.jpg","lat":"51.528735","lng":"-0.381784","path":{"level1":"歐洲","level2":"英國","level3":""},"next":"1"}
+]

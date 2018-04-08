@@ -1,0 +1,4 @@
+﻿[
+  {"AreaName":"中國","AreaNo":"1","CityId":"","Type":"2","img":"images/120.jpg","lat":"39.904211","lng":"116.40739499999995","path":{"level1":"亞洲","level2":"中國","level3":""},"next":"1"},
+  {"AreaName":"俄罗斯","AreaNo":"2","CityId":"","Type":"2","img":"images/120.jpg","lat":"55.755826","lng":"37.6173","path":{"level1":"亞洲","level2":"俄罗斯","level3":""},"next":"1"}
+]

@@ -1,0 +1,6 @@
+[
+{"name":"购物一","type":["购物逛街"],"address":"厦门市思明区金榜路127号","url":"images/s1.jpg","lat":"","lng":""},
+{"name":"购物二","type":["购物逛街"],"address":"厦门市思明区金榜路127号","url":"images/s2.jpg","lat":"","lng":""},
+{"name":"购物三","type":["购物逛街"],"address":"厦门市思明区金榜路127号","url":"images/s3.jpg","lat":"","lng":""},
+{"name":"购物四","type":["购物逛街"],"address":"厦门市思明区金榜路127号","url":"images/s4.jpg","lat":"","lng":""}
+]

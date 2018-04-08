@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--font awesome ui-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <h1>LIONTRAVEL&nbsp;行程规划器</h1>
+        <div class="identity">
+            <p>Hi,Miller</p>
+        </div>
+    </header>
+    <div class="main">
+        <div class="content">
+            <div id="map" class="map"></div>
+            <div class="daysListBox">
+                <div class="dayList">
+                    <div class="days">
+                        <ul class="plannerDays" id="plannerDays">
+                            <!--<li>-->
+                            <!--<div class="day dayCurrent">-->
+                            <!--<p>D<span class="dayOrder">1</span></p>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<div class="day">-->
+                            <!--<p>D<span class="dayOrder">10</span></p>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                        </ul>
+                        <a href="#" class="addDays">+</a>
+                    </div>
+                    <ul class="tools">
+                        <li>
+                            <div class="save">
+                                <i></i>
+                                <p>暂存</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="del">
+                                <i></i>
+                                <p>清空</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sent">
+                                <i></i>
+                                <p>送出</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!---222--->
+            <div>
+                <a href="#" class="hideLeftPopup"></a>
+                <div class="mainLeftBox">
+                    <div class="day_details" day-no="1">
+                        <div class="day-details-header">
+                            <div class="day-btn pre-day-btn">
+                                <i class="fa fa-chevron-left"></i>
+                            </div>
+                            <h3 class="now-day">
+                                <span>第</span>
+                                <span class="day-show">1</span>
+                                <span>天(</span>
+                                <span class="pkg_num">2</span>
+                                <span>)</span>
+                            </h3>
+                            <div class="day-btn next-day-btn">
+                                <i class="fa fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="destinationTrip">a-b</div>
+                        <div class="trip-detail-wrap">
+                            <div class="tip ">
+                                <i class="fa fa-info"></i>
+                                <i class="tipTxt">第一天行程建議不要排的太緊湊</i>
+                            </div>
+                            <div class="trip-detail-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tripListBox">
+                <a href="#" class="hidePopup"></a>
+                <div class="tripList">
+                    <div class="header">
+                        <h3>厦门市</h3>
+                        <a href="#" id="chooseCity"></a>
+                    </div>
+                    <div class="tripLine">
+                        <div class="place">
+                            <i class="tipIcon"></i>
+                            <select class="placeSelect">
+                                <optgroup label="子動線">
+                                    <option data-id="000001" data-type="1" data-sort="1">千歲市+登別市+札幌市+函館市+小樽市+札幌市</option>
+                                    <option data-id="000005" data-type="1" data-sort="2">千歲市+登別市+札幌市+小樽市+札幌市+函館市</option>
+                                    <option data-id="000007" data-type="1" data-sort="3">千歲市+登別市+苫小牧市+札幌市+小樽市+札幌市+七飯町+函館市</option>
+                                    <option data-id="000008" data-type="1" data-sort="4">千歲市+登別市+苫小牧市+札幌市+登別市+小樽市+札幌市+七飯町+函館市</option>
+                                </optgroup>
+                                <optgroup label="商圈"></optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="tripCategory">
+                        <div class="category current">
+                            <i class="all"></i>
+                            <p>全部</p>
+                        </div>
+                        <div class="category">
+                            <i class="trip"></i>
+                            <p>景点</p>
+                        </div>
+                        <div class="category">
+                            <i class="hotel"></i>
+                            <p>酒店</p>
+                        </div>
+                        <div class="category">
+                            <i class="traffic"></i>
+                            <p>交通</p>
+                        </div>
+                        <div class="category">
+                            <i class="food"></i>
+                            <p>餐厅</p>
+                        </div>
+                        <div class="category">
+                            <i class="shopping"></i>
+                            <p>购物</p>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="searchBox">
+                            <input type="text" class="searchInput" placeholder="请输入关键字">
+                            <div class="searchBtn">
+                                <i></i>
+                            </div>
+                        </div>
+                        <div class="searchResult" id="currType">
+                            <i>組件</i>
+                            <span class="resultNum">1</span>
+                        </div>
+                        <div class="searchResult current" id="allType">
+                            <i>組件</i>
+                            <span class="resultNum">99+</span>
+                        </div>
+                    </div>
+                    <div class="tripItems">
+                        <div class="items" id="items"></div>
+                    </div>
+                    <div class="pagesBtn">
+                        <input type="button" class="prev" value="<">
+                        <ul class="pagesItems"></ul>
+                        <input type="button" class="next" value=">">
+                    </div>
+                    <div class="filterData"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</div>
+<div class="savePopup">
+    <div class="popup">
+        <h3>*请输入下列资料以储存编辑行程</h3>
+        <div class="content">
+            <div>
+                <span>行程名称:</span>
+                <input type="text">
+            </div>
+            <div>
+                <span>旅游区:</span>
+                <div class="selects">
+                    <select>
+                        <option>请选择</option>
+                    </select>
+                    <select>
+                        <option>请选择</option>
+                    </select>
+                    <select>
+                        <option>请选择</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <span>员工编号:</span>
+                <input type="text" class="numbers">
+            </div>
+        </div>
+        <div class="popupBtn">
+            <a href="#" id="cancel">放弃</a>
+            <a href="#" id="confirmed">确认</a>
+        </div>
+    </div>
+</div>
+<!--时间备注-->
+<div class="trafficInfo is-hidden">
+    <div>
+        <div class="infoBox">
+            <a class="close"></a>
+            <div>
+                <div class="common Date">
+                    <p>从</p>
+                    <div class="DateBox">
+                        <input id="starHour" class="hour" type="text" value="请输入时间">
+                        <label>至</label>
+                        <input id="endHour" class="hour" type="text" value="请输入时间">
+                    </div>
+                    <p class="tipF">*时间格式为:&nbsp;hh:mm</p>
+                </div>
+                <div class="common button">
+                    <button class="save">保存</button>
+                    <button class="cancel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tripDetails">
+    <div class="tripDetails-left" >
+        <div>
+            <h1 class="trip-name" >厦门南普陀</h1>
+            <div class="trip-ename" >xiamennanputuo</div>
+            <div class="trip-imgs-tab" >
+                <ul class="ulImg" >
+                    <li class="nowLi" style="background:url(images/t1.jpg);background-size:cover;background-repeat: no-repeat;"></li>
+                    <li class="" style="background:url(images/t2.jpg);background-size:cover;background-repeat: no-repeat;"></li>
+                    <li class="" style="background:url(images/t3.jpg);background-size:cover;background-repeat: no-repeat;"></li>
+                    <li class="" style="background:url(images/t4.jpg);background-size:cover;background-repeat: no-repeat;"></li>
+                    <li class="" style="background:url(images/t5.jpg);background-size:cover;background-repeat: no-repeat;"></li>
+                </ul>
+                <div class="bt">
+                    <div class="bt-left fa fa-chevron-left" ></div>
+                    <div class="bt-right fa fa-chevron-right" style=""></div>
+                    <style type="text/css">
+                        .bt-left{width:28px;height:44px;position:absolute;top:50%;left:2%;margin-top:-22px;color:rgba(255,0,0,0.3);font-size:30px;line-height: 44px;z-index:5;}
+                        .bt-right{width:28px;height:44px;position:absolute;top:50%;right:2%;margin-top:-22px;color:rgba(255,0,0,0.3);font-size:30px;line-height: 44px;z-index:5;}
+                        .bt-left:hover,.bt-right:hover{cursor:pointer;color:red;}
+                        .ulImg li { border:0;}
+
+                    </style>
+                </div>
+            </div>
+            <div class="trip-imgs-samll" >
+                <ul >
+                    <li class="" style="background:url(images/t1.jpg);background-size:cover;background-repeat: no-repeat;outline: red solid 1px;"></li>
+                    <li class="" style="background:url(images/t2.jpg);background-size:cover;background-repeat: no-repeat;"></li>
+                    <li class="" style="background:url(images/t3.jpg);background-size:cover;background-repeat: no-repeat;"></li>
+                    <li class="" style="background:url(images/t4.jpg);background-size:cover;background-repeat: no-repeat;"></li>
+                    <li class="" style="background:url(images/t5.jpg);background-size:cover;background-repeat: no-repeat;"></li>
+                </ul>
+                <div class="bt"></div>
+            </div>
+        </div>
+    </div>
+    <div class="tripDetails-right" >
+        <div class="palyNote">
+            <span>玩法说明</span>
+
+        </div>
+        <div class="bt-close">
+            <div class="fa fa-times btClose" ></div>
+        </div>
+        <div class="palyContain">
+            <ul class="playsUl">
+                <!--<li >-->
+                    <!--<div class="event-title" >玩法1：<span class="event-detail-btn">公园散步</span></div>-->
+                    <!--<div class="amount-wrap">-->
+                        <!--<div class="form-amount" >-->
+                            <!--<input type="button" class="minus" value="-" >-->
+                            <!--<p >停留<span id="times">1.0</span>小时</p>-->
+                            <!--<input type="button" class="add" value="+" >-->
+                        <!--</div>-->
+                        <!--<div class="event-price" >无参考售价</div>-->
+                    <!--</div>-->
+                    <!--<div class="detail-table " >-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--适用时间-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+                                <!--08:30~18:00-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--玩法介紹-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--費用說明-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="fa fa-plus" ></div>-->
+                <!--</li>-->
+                <!--<li >-->
+                    <!--<div class="event-title" >玩法1：<span class="event-detail-btn">公园散步</span></div>-->
+                    <!--<div class="amount-wrap">-->
+                        <!--<div class="form-amount" >-->
+                            <!--<input type="button" class="minus" value="-" >-->
+                            <!--<p >停留<span id="times">1.0</span>小时</p>-->
+                            <!--<input type="button" class="add" value="+" >-->
+                        <!--</div>-->
+                        <!--<div class="event-price" >无参考售价</div>-->
+                    <!--</div>-->
+                    <!--<div class="detail-table " >-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--适用时间-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+                                <!--08:30~18:00-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--玩法介紹-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+                                <!--1864年武田三郎花十年的歲月完成，是日本非常稀有的西洋式城堡，並且為幕末箱館戰爭的終結地，春天更是函館著名的櫻花聖地，盛開時像花海一般，是道南最著名的櫻花名所之一。-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--費用說明-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+                                <!--此處為著名的櫻花聖地，春天可漫步於公園觀賞櫻花。此處不需門票。-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="fa fa-plus" ></div>-->
+                <!--</li>-->
+                <!--<li >-->
+                    <!--<div class="event-title" >玩法1：<span class="event-detail-btn">公园散步</span></div>-->
+                    <!--<div class="amount-wrap">-->
+                        <!--<div class="form-amount" >-->
+                            <!--<input type="button" class="minus" value="-" >-->
+                            <!--<p >停留<span id="times">1.0</span>小时</p>-->
+                            <!--<input type="button" class="add" value="+" >-->
+                        <!--</div>-->
+                        <!--<div class="event-price" >无参考售价</div>-->
+                    <!--</div>-->
+                    <!--<div class="detail-table " >-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--适用时间-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+                                <!--08:30~18:00-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--玩法介紹-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+                                <!--1864年武田三郎花十年的歲月完成，是日本非常稀有的西洋式城堡，並且為幕末箱館戰爭的終結地，春天更是函館著名的櫻花聖地，盛開時像花海一般，是道南最著名的櫻花名所之一。-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--費用說明-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+                                <!--此處為著名的櫻花聖地，春天可漫步於公園觀賞櫻花。此處不需門票。-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="fa fa-plus" ></div>-->
+                <!--</li>-->
+                <!--<li >-->
+                    <!--<div class="event-title" >玩法1：<span class="event-detail-btn">公园散步</span></div>-->
+                    <!--<div class="amount-wrap">-->
+                        <!--<div class="form-amount" >-->
+                            <!--<input type="button" class="minus" value="-" >-->
+                            <!--<p >停留<span id="times">1.0</span>小时</p>-->
+                            <!--<input type="button" class="add" value="+" >-->
+                        <!--</div>-->
+                        <!--<div class="event-price" >无参考售价</div>-->
+                    <!--</div>-->
+                    <!--<div class="detail-table" >-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--适用时间-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+                                <!--08:30~18:00-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--玩法介紹-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+                                <!--1864年武田三郎花十年的歲月完成，是日本非常稀有的西洋式城堡，並且為幕末箱館戰爭的終結地，春天更是函館著名的櫻花聖地，盛開時像花海一般，是道南最著名的櫻花名所之一。-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="detail-row" >-->
+                            <!--<div class="detail-title" >-->
+                                <!--費用說明-->
+                            <!--</div>-->
+                            <!--<div class="detail-content"  >-->
+                                <!--此處為著名的櫻花聖地，春天可漫步於公園觀賞櫻花。此處不需門票。-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="fa fa-plus" ></div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="mark" style="display:none;"></div>
+<div id="overlay" class="" style="width:100%;height:100%;position:absolute;z-index: 500;background:rgba(0,0,0,0.3);cursor: wait;"></div>
+<script src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="http://maps.google.cn/maps/api/js?key=AIzaSyDQ60yIyY_iuD3vetS7vn8yLjHJ8KhzJas&sensor=false&libraries=places"></script>
+<script src="js/map.js"></script>
+<script src="js/route.js"></script>
+<script src="js/templete.js"></script>
+<script src="js/page.js"></script>
+<script src="js/main.js"></script>
+<script src="js/days.js"></script>
+<script src="js/drag.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行程规划器</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <h1>TRAVELPLANNER&nbsp;行程规划器</h1>
+        <div class="identity">
+            <p>Hi,Miller</p>
+        </div>
+    </header>
+    <div class="main">
+        <div class="content">
+            <div id="map" class="map"></div>
+            <div class="destination">
+                <div class="destination-header">選擇目的地</div>
+                <div class="destination-search">
+                    <div class="search-wrap ui-widget">
+                        <div class="search-icon"><i class="fa fa-search"></i></div>
+                        <input id="dest_search_input" disabled type="text" class="form-text dest-search-input ui-autocomplete-input" placeholder="請輸入目的地關鍵字" autocomplete="off">
+                    </div>
+                    <ul id="continents_list" class="continents-list ">
+                        <!--<li class="continents is-acted" data-no="-1" data-type="1" data-l1="" data-l2="" data-l3="" data-latlng="25.093987,121.383663">熱門</li>-->
+                        <!--<li class="continents" data-no="1" data-type="1" data-l1="" data-l2="" data-l3="" data-latlng="50.169660,15.051364">歐洲</li>-->
+                        <!--<li class="continents" data-no="2" data-type="1" data-l1="" data-l2="" data-l3="" data-latlng="52.872845,84.890278">亞洲</li>-->
+                        <!--<li class="continents" data-no="3" data-type="1" data-l1="" data-l2="" data-l3="" data-latlng="5.964114,22.182946">非洲</li>-->
+                        <!--<li class="continents" data-no="4" data-type="1" data-l1="" data-l2="" data-l3="" data-latlng="17.388351,-95.514525">美洲</li>-->
+                        <!--<li class="continents" data-no="5" data-type="1" data-l1="" data-l2="" data-l3="" data-latlng="-28.764969,151.897432">大洋洲</li>-->
+                        <!--<li class="continents" data-no="6" data-type="1" data-l1="" data-l2="" data-l3="" data-latlng="-77.375894,23.769262">南極洲</li>-->
+                    </ul>
+                    <div id="dest_breadcrumb" class="destination-breadcrumb is-hidden">
+                        <div class="bread world back-link">世界</div>
+                        <div class="bread continents back-link" data-no="2" data-type="1" data-latlng="52">亞洲</div>
+                        <div class="bread country" data-no="2020" data-type="2" data-latlng="35.382490,140.394736">日本</div>
+                        <div class="bread city" data-no="C202000013" data-type="3" data-latlng="42.551269,140.764098">洞爺湖町-關聯城市</div>
+                    </div>
+                </div>
+                <div class="destination-wrap">
+                    <div id="dest_list" class="destination-inner-list ">
+                    </div>
+
+                </div>
+                <div class="pagenation">
+                </div>
+            </div>
+            <div id="my_trip_list" class="my_trip_list is-hide">
+                <div class="my-trip-header">
+                    <h3>我的行程</h3>
+                    <div class="start-time-wrap">
+                        <label class="start-date-title" for="start_date">
+                            <i class="fa fa-calendar"></i>
+                            出發日期
+                        </label>
+                        <input id="start_date" class="start-date-input" type="text" readonly/>
+                    </div>
+                </div>
+                <div class="my-trip-wrap">
+                    <div class="my-trip-inner-list">
+                        <div class="my-trip-item-wrap">
+                            <div class="my-trip-item ">
+                                <i class="fa fa-plane"></i>
+                                <span id="trip_start_show" class="start-country">台北</span>（出发）
+                            </div>
+                        </div>
+                        <div id="my_trip_plane" onselectstart="return false" class="my_trip_plane">
+                        </div>
+
+                        <div class="my-trip-item-wrap last-wrap">
+                            <div class="my-trip-item ">
+                                <i class="fa fa-plane"></i>
+                                <span id="trip__show" class="start-country">台北</span>（返回）
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="my-trip-footer">
+                    <a class="next-btn" href="planner.html">
+                        下一步
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</div>
+<div id="dest_list_copy" class="country-item is-hidden" data-no="" data-type="" data-l1="" data-l2="" data-l3="" data-cityid="" data-latlng=""><div class="country-img" ></div><div class="country-summery"><h4 class="country-name"></h4><div class="en-name"></div></div><i class="fa fa-chevron-right"></i><i class="fa fa-plus add_country_btn"></i></div>
+<div id="my_trip_copy"  class="my-trip-item-wrap is-hidden " data-no="" data-addrinfo="" data-latlng=""  data-next="">
+    <div class="my-trip-item">
+        <div class="delete-btn delete_trip_btn">
+            <i class="fa fa-times-circle"></i>
+        </div>
+        <div class="country"></div>
+        <div class="form-amount">
+            <div class="amount-btn num-minus day_amount_minus">-</div>
+            <div class="num-now"><span class="day_amount_num">1</span>天</div>
+            <div class="amount-btn num-plus day_amount_plus">+</div>
+        </div>
+    </div>
+    <div class="traffic-item trip_traffic_item">
+        <div class="traffic-way">
+            <i class="fa fa-arrow-right"></i>
+        </div>
+        <div class="distance">145m</div>
+        <div class="time-spend">
+            <i class="fa fa-clock-o"></i>
+            <i class="time">6時31分</i>
+        </div>
+        <div class="fee alpha50">約$NT2,000</div>
+    </div>
+</div>
+<div class="Calendar">
+    <div class="tool">
+        <div class="bar">
+            <div class="left">
+                <div>
+                    <a href="#" class="yleft bt">
+                        <span class="arrowLeft"></span>
+                    </a>
+                    <input class="year" readonly="" value="2016年">
+                    <a href="#" class="ydown bt">
+                        <span class="arrowDown"></span>
+                    </a>
+                    <a href="#" class="yright bt">
+                        <span class="arrowRight"></span>
+                    </a>
+                </div>
+                <div class="contain_ys">
+                    <a href="#" class="ysup ymbt">
+                        <span class="yarrup"></span>
+                    </a>
+                    <dd class="dd_ys">
+                        <dl>1</dl>
+                        <dl>2</dl>
+                        <dl>3</dl>
+                        <dl>4</dl>
+                        <dl>5</dl>
+                        <dl>6</dl>
+                        <dl>7</dl>
+                        <dl>8</dl>
+                        <dl>9</dl>
+                        <dl>10</dl>
+                        <dl>11</dl>
+                        <dl>12</dl>
+                        <dl>13</dl>
+                        <dl>14</dl>
+                    </dd>
+                    <a href="#" class="ysdown ymbt">
+                        <span class="yarrdown"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <a href="#" class="mleft bt">
+                        <span class="arrowLeft "></span>
+                    </a>
+                    <input class="month" readonly="" value="9月">
+                    <a href="#" class="mdown bt">
+                        <span class="arrowDown"></span>
+                    </a>
+                    <a href="#" class="mright bt">
+                        <span class="arrowRight"></span>
+                    </a>
+                </div>
+                <div class="contain_ms">
+                    <dd class="dd_ms">
+                        <dl>1月</dl>
+                        <dl>2月</dl>
+                        <dl>3月</dl>
+                        <dl>4月</dl>
+                        <dl>5月</dl>
+                        <dl>6月</dl>
+                        <dl>7月</dl>
+                        <dl>8月</dl>
+                        <dl>9月</dl>
+                        <dl>10月</dl>
+                        <dl>11月</dl>
+                        <dl>12月</dl>
+                    </dd>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>日</th>
+            <th>一</th>
+            <th>二</th>
+            <th>三</th>
+            <th>四</th>
+            <th>五</th>
+            <th>六</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="toolbottom">
+        <div class="bootmbar">
+            <a class="datecomfirm">确定</a>
+            <a class="current">今天</a>
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript" src="http://maps.google.cn/maps/api/js?key=AIzaSyDQ60yIyY_iuD3vetS7vn8yLjHJ8KhzJas&sensor=false&libraries=places"></script>
+</html>

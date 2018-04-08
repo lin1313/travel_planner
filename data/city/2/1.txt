@@ -1,0 +1,9 @@
+﻿[
+  {"AreaName":"北京","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"39.904211","lng":"116.40739499999995","path":{"level1":"亞洲","level2":"中國","level3":"北京"},"next":"0"},
+  {"AreaName":"厦门","AreaNo":"2","CityId":"","Type":"3","img":"images/120.jpg","lat":"24.479834","lng":"118.089425","path":{"level1":"亞洲","level2":"中國","level3":"厦门"},"next":"1"},
+  {"AreaName":"深圳","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"22.543096","lng":"114.05786499999999","path":{"level1":"亞洲","level2":"中國","level3":"深圳"},"next":"0"},
+  {"AreaName":"上海","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"121.473701","lng":"37.6173","path":{"level1":"亞洲","level2":"中國","level3":"上海"},"next":"0"},
+  {"AreaName":"香港","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"22.396428","lng":"114.10949700000003","path":{"level1":"亞洲","level2":"中國","level3":"上海"},"next":"0"},
+  {"AreaName":"澳门","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"22.198745","lng":"113.54387300000008","path":{"level1":"亞洲","level2":"中國","level3":"澳门"},"next":"0"},
+  {"AreaName":"重庆","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"29.56301","lng":"106.551556","path":{"level1":"亞洲","level2":"中國","level3":"重庆"},"next":"0"}
+]

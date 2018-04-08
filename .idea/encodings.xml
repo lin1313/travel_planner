@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/js/days.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/drag.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/main.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/map.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/templete.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/txt/all.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/txt/food.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/txt/hotel.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/txt/shopping.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/txt/traffic.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/txt/trip.txt" charset="UTF-8" />
+  </component>
+</project>

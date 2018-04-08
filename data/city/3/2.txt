@@ -1,0 +1,10 @@
+﻿[
+  {"AreaName":"厦门-思明区","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"24.445567","lng":"118.08265800000004","path":{"level1":"亞洲","level2":"中國","level3":"厦门"},"next":"0"},
+  {"AreaName":"厦门-湖里区","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"24.512905","lng":"118.14676899999995","path":{"level1":"亞洲","level2":"中國","level3":"厦门"},"next":"0"},
+  {"AreaName":"厦门-海沧区","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"24.484503","lng":"118.03281800000002","path":{"level1":"亞洲","level2":"中國","level3":"厦门"},"next":"0"},
+  {"AreaName":"厦门-集美区","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"24.57597","lng":"118.09733699999992","path":{"level1":"亞洲","level2":"中國","level3":"厦门"},"next":"0"},
+  {"AreaName":"厦门-翔安区","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"24.618544","lng":"118.24803399999996","path":{"level1":"亞洲","level2":"中國","level3":"厦门"},"next":"0"},
+  {"AreaName":"厦门-同安区","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"24.722747","lng":"118.15214900000001","path":{"level1":"亞洲","level2":"中國","level3":"厦门"},"next":"0"},
+  {"AreaName":"厦门-翔安区","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"24.618544","lng":"118.24803399999996","path":{"level1":"亞洲","level2":"中國","level3":"厦门"},"next":"0"},
+  {"AreaName":"厦门-同安区","AreaNo":"","CityId":"","Type":"3","img":"images/120.jpg","lat":"24.722747","lng":"118.15214900000001","path":{"level1":"亞洲","level2":"中國","level3":"厦门"},"next":"0"}
+]

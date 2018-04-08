@@ -1,0 +1,9 @@
+[
+    {"AreaName":"熱門","AreaNo":"-1","CityId":"","Type":"1","img":"images/120.jpg","lat":"25.093987","lng":"121.383663","path":{"level1":"熱門","level2":"","level3":""}},
+    {"AreaName":"歐洲","AreaNo":"1","CityId":"","Type":"1","img":"images/120.jpg","lat":"50.169660","lng":"15.051364","path":{"level1":"歐洲","level2":"","level3":""}},
+    {"AreaName":"亞洲","AreaNo":"2","CityId":"","Type":"1","img":"images/120.jpg","lat":"52.872845","lng":"84.890278","path":{"level1":"亞洲","level2":"","level3":""}},
+    {"AreaName":"非洲","AreaNo":"3","CityId":"","Type":"1","img":"images/120.jpg","lat":"5.964114","lng":"22.182946","path":{"level1":"非洲","level2":"","level3":""}},
+    {"AreaName":"美洲","AreaNo":"4","CityId":"","Type":"1","img":"images/120.jpg","lat":"17.388351","lng":"-95.514525","path":{"level1":"美洲","level2":"","level3":""}},
+    {"AreaName":"大洋洲","AreaNo":"5","CityId":"","Type":"1","img":"images/120.jpg","lat":"-28.764969","lng":"151.897432","path":{"level1":"大洋洲","level2":"","level3":""}},
+    {"AreaName":"南極洲","AreaNo":"6","CityId":"","Type":"1","img":"images/120.jpg","lat":"-77.375894","lng":"23.769262","path":{"level1":"南極洲","level2":"","level3":""}}
+]
